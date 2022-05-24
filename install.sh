@@ -113,17 +113,16 @@ fi
 
 echo "Zabbix Install Completed."
 
-yum -y install wget
+#yum -y install wget
 
 
 systemctl start zabbix-agent
 systemctl enable zabbix-agent
 
-mysql -u zabbix -p1234
-use zabbix;
-update zabbix.users set passwd=md5('1234') where alias='Admin';
+#mysql -u zabbix -p1234
+#use zabbix;
+#update zabbix.users set passwd=md5('1234') where alias='Admin';
 
-9
 #wget https://dl.grafana.com/enterprise/release/grafana-enterprise-7.2.2-1.x86_64.rpm
 #yum -y install grafana-enterprise-7.2.2-1.x86_64.rpm
 #grafana-cli plugins install alexanderzobnin-zabbix-app 3.12.4
